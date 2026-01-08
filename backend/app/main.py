@@ -9,19 +9,19 @@ from app.crud import save_quiz, get_all_quizzes
 
 app = FastAPI(title="Wiki Quiz Generator API")
 
-# ✅ CORS (MANDATORY for frontend)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:5173",
-    "https://wiki-quiz-app.vercel.app"
-],
+        "http://localhost:5173",
+        "https://wiki-quiz-apps.vercel.app",
+        "https://wiki-quiz-app.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# ✅ Run DB setup when server starts
+
 @app.on_event("startup")
 def startup_event():
     init_db()
