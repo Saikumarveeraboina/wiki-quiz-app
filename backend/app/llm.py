@@ -1,55 +1,57 @@
 import os
 import json
-import google.generativeai as genai
+import re
 from dotenv import load_dotenv
+from langchain_groq import ChatGroq
+from langchain_core.messages import HumanMessage
 
-# Load environment variables
 load_dotenv()
 
-# Configure Gemini
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
+def extract_json(text: str):
+    match = re.search(r"\{[\s\S]*\}", text)
+    if not match:
+        raise ValueError("No JSON found in LLM response")
+    return json.loads(match.group())
 
 
 def generate_quiz_with_llm(text: str):
-    """
-    Generate quiz using Gemini LLM
-    """
+    llm = ChatGroq(
+        api_key=os.getenv("GROQ_API_KEY"),
+        model="llama-3.1-8b-instant"
 
-    # ✅ UPDATED MODEL NAME
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    )
 
     prompt = f"""
-You are given Wikipedia article content.
+Generate exactly 5 multiple-choice questions from the following Wikipedia content.
 
-Generate exactly 5 multiple-choice questions strictly based on the content.
+Rules:
+- Use ONLY the given content
+- 4 options per question
+- Include correct answer
+- Include difficulty (easy, medium, hard)
+- Include short explanation
+- Return ONLY JSON (no text, no markdown)
 
-Each question must include:
-- question
-- 4 options
-- correct answer
-- difficulty (easy, medium, hard)
-- short explanation
-
-Return ONLY valid JSON in the following format:
-
+JSON format:
 {{
   "quiz": [
     {{
       "question": "...",
       "options": ["A", "B", "C", "D"],
       "answer": "...",
-      "difficulty": "easy",
+      "difficulty": "easy|medium|hard",
       "explanation": "..."
     }}
   ],
   "related_topics": ["Topic1", "Topic2"]
 }}
 
-Article Content:
+Content:
 {text}
 """
 
-    response = model.generate_content(prompt)
+    response = llm.invoke([HumanMessage(content=prompt)])
 
-    # Convert response text to JSON
-    return json.loads(response.text)
+
+    return extract_json(response.content)
