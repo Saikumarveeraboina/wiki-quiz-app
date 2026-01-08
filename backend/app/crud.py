@@ -2,29 +2,33 @@ import json
 from app.db import get_db_connection
 
 
+import json
+from app.db import get_db_connection
+
 def save_quiz(data):
     conn = get_db_connection()
     cur = conn.cursor()
-
-    cur.execute(
-        """
-        INSERT INTO quizzes (url, title, summary, quiz, related_topics)
-        VALUES (%s, %s, %s, %s, %s)
-        ON CONFLICT ON CONSTRAINT quizzes_url_unique
-        DO NOTHING;
-        """,
-        (
-            data["url"],
-            data["title"],
-            data["summary"],
-            json.dumps(data["quiz"]),
-            json.dumps(data["related_topics"]),
+    try:
+        cur.execute(
+            """
+            INSERT INTO quizzes (url, title, summary, quiz, related_topics)
+            VALUES (%s, %s, %s, %s, %s);
+            """,
+            (
+                data["url"],
+                data["title"],
+                data["summary"],
+                json.dumps(data["quiz"]),
+                json.dumps(data["related_topics"]),
+            )
         )
-    )
-
-    conn.commit()
-    cur.close()
-    conn.close()
+        conn.commit()
+    except Exception as e:
+        conn.rollback()
+        print("DB insert failed:", e)
+    finally:
+        cur.close()
+        conn.close()
 
 
 def get_all_quizzes():
