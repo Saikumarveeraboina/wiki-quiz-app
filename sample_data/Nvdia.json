@@ -1,0 +1,72 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Nvidia",
+  "title": "Nvidia",
+  "summary": "Nvidia Corporation[a] (/ɛnˈvɪdiə/ en-VID-ee-ə) is an American technology company headquartered in Santa Clara, California. Founded in 1993 by Jensen Huang, Chris Malachowsky, and Curtis Priem, it develops graphics processing units (GPUs), systems on chips (SoCs), and application programming interfaces (APIs) for data science, high-performance computing, video games, and mobile and automotive applications.[5][6] Nvidia has been described as a Big Tech company. Originally focused on GPUs for video gaming, Nvidia broadened their use into other markets, including artificial intelligence (AI), professional visualization, and supercomputing. The company's product lines include GeForce GPUs for gaming and creative workloads, and professional GPUs for edge computing, scientific research, and industrial applications. As of the first quarter of 2025, Nvidia held a 92% share of the discrete desktop and laptop GPU market.[7][8]",
+  "quiz": [
+    {
+      "question": "Where is Nvidia Corporation headquartered?",
+      "options": [
+        "Santa Monica, California",
+        "Santa Clara, California",
+        "San Francisco, California",
+        "Los Angeles, California"
+      ],
+      "answer": "Santa Clara, California",
+      "difficulty": "easy",
+      "explanation": "The company is headquartered in Santa Clara, California."
+    },
+    {
+      "question": "When was Nvidia Corporation founded?",
+      "options": [
+        "1992",
+        "1993",
+        "1994",
+        "1995"
+      ],
+      "answer": "1993",
+      "difficulty": "easy",
+      "explanation": "Nvidia Corporation was founded in 1993."
+    },
+    {
+      "question": "What product lines does Nvidia have for gaming and creative workloads?",
+      "options": [
+        "GeForce GPUs, Tesla GPUs",
+        "GeForce GPUs, Quadro GPUs",
+        "Tesla GPUs, Quadro GPUs",
+        "GeForce GPUs only"
+      ],
+      "answer": "GeForce GPUs",
+      "difficulty": "medium",
+      "explanation": "The company's product lines include GeForce GPUs for gaming and creative workloads."
+    },
+    {
+      "question": "What is Nvidia's current share of the discrete desktop and laptop GPU market?",
+      "options": [
+        "80%",
+        "85%",
+        "90%",
+        "92%"
+      ],
+      "answer": "92%",
+      "difficulty": "medium",
+      "explanation": "As of the first quarter of 2025, Nvidia held a 92% share of the discrete desktop and laptop GPU market."
+    },
+    {
+      "question": "What fields does Nvidia's professional GPUs serve?",
+      "options": [
+        "Video gaming, AI, and supercomputing",
+        "Edge computing, scientific research, and industrial applications",
+        "Data science and mobile applications",
+        "High-performance computing and video games"
+      ],
+      "answer": "Edge computing, scientific research, and industrial applications",
+      "difficulty": "hard",
+      "explanation": "The company's product lines include professional GPUs for edge computing, scientific research, and industrial applications."
+    }
+  ],
+  "related_topics": [
+    "Nvidia",
+    "Technology",
+    "Computer Science"
+  ]
+}

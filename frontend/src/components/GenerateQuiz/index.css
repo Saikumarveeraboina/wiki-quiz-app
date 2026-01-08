@@ -1,0 +1,30 @@
+.generate-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.generate-container h2 {
+  margin-bottom: 15px;
+}
+
+.generate-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.generate-container button {
+  background: #4f46e5;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.generate-container button:hover {
+  background: #4338ca;
+}

@@ -1,15 +1,18 @@
-def generate_quiz(text: str):
-    return [
-        {
-            "question": "Who is the article about?",
-            "options": [
-                "A mathematician",
-                "A football player",
-                "A politician",
-                "An actor"
-            ],
-            "answer": "A mathematician",
-            "difficulty": "easy",
-            "explanation": "Mentioned in the introduction."
-        }
-    ]
+cursor = conn.cursor()
+
+cursor.execute(
+    """
+    INSERT INTO quizzes (wiki_url, title, summary, quiz, related_topics)
+    VALUES (%s, %s, %s, %s, %s)
+    """,
+    (
+        url,
+        title,
+        summary,
+        json.dumps(quiz),
+        json.dumps(related_topics)
+    )
+)
+
+conn.commit()
+cursor.close()

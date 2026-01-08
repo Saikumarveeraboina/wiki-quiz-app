@@ -1,0 +1,72 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+  "title": "Alan Turing",
+  "summary": "Alan Mathison Turing (/ˈtjʊərɪŋ/; 23 June 1912 – 7 June 1954) was an English mathematician, computer scientist, logician, cryptanalyst, philosopher and theoretical biologist. He was highly influential in the development of theoretical computer science.",
+  "quiz": [
+    {
+      "question": "What is Alan Turing's profession?",
+      "options": [
+        "Mathematician",
+        "Computer Scientist",
+        "Cryptanalyst",
+        "All of the above"
+      ],
+      "answer": "D",
+      "difficulty": "easy",
+      "explanation": "Alan Turing worked as a mathematician, computer scientist, and cryptanalyst."
+    },
+    {
+      "question": "Who is considered the father of theoretical computer science?",
+      "options": [
+        "Alan Turing",
+        "Charles Babbage",
+        "Ada Lovelace",
+        "John von Neumann"
+      ],
+      "answer": "A",
+      "difficulty": "medium",
+      "explanation": "Alan Turing is widely regarded as the father of theoretical computer science."
+    },
+    {
+      "question": "What machine did Turing introduce?",
+      "options": [
+        "Turing Machine",
+        "Analytical Engine",
+        "Difference Engine",
+        "Lambda Machine"
+      ],
+      "answer": "A",
+      "difficulty": "medium",
+      "explanation": "The Turing Machine models general-purpose computation."
+    },
+    {
+      "question": "Which field did Turing NOT directly contribute to?",
+      "options": [
+        "Cryptography",
+        "Theoretical Biology",
+        "Astrophysics",
+        "Computer Science"
+      ],
+      "answer": "C",
+      "difficulty": "hard",
+      "explanation": "Astrophysics is not mentioned as one of his fields."
+    },
+    {
+      "question": "In which year was Alan Turing born?",
+      "options": [
+        "1909",
+        "1910",
+        "1912",
+        "1915"
+      ],
+      "answer": "C",
+      "difficulty": "easy",
+      "explanation": "Alan Turing was born in 1912."
+    }
+  ],
+  "related_topics": [
+    "Theoretical Computer Science",
+    "Cryptography",
+    "Turing Machine"
+  ]
+}
