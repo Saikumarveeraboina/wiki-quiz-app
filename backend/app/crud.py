@@ -10,7 +10,7 @@ def save_quiz(data):
         """
         INSERT INTO quizzes (url, title, summary, quiz, related_topics)
         VALUES (%s, %s, %s, %s, %s)
-        ON CONFLICT ON CONSTRAINT quizzes_url_key
+        ON CONFLICT ON CONSTRAINT quizzes_url_unique
         DO NOTHING;
         """,
         (
