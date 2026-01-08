@@ -8,7 +8,20 @@ body {
   margin: auto;
   padding: 20px;
 }
-
+.app-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+.heading {
+  margin-bottom: 15px;
+  color: #4f46e5;
+}
+.heading2 {
+  margin-bottom: 15px;
+  color: #e61089;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
 .card {
   background: white;
   padding: 20px;
@@ -25,18 +38,56 @@ input {
 button {
   padding: 10px 16px;
   border: none;
-  background: #4f46e5;
+  background: #d50c13;
   color: white;
   border-radius: 6px;
   cursor: pointer;
 }
-
+.btn{
+   padding: 6px 8px;
+  border: none;
+  background: #01e341;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
 button:hover {
   background: #4338ca;
 }
 
 .quiz-section {
   margin-top: 30px;
+}
+.para {
+  font-size: 16px;
+  color: #0c27c3;
+  margin-bottom: 8px;
+}
+.para2 {
+  font-size: 16px;
+  color: #ffff;
+  margin-bottom: 8px;
+  background-color: #14de1c;
+  border-radius: 4px;
+  padding: 2px 6px;
+  width: 200px;
+  margin-top: 10px;
+}
+.para3 {
+  font-size: 16px;
+  color: #bc0f0f;
+  margin-bottom: 8px;
+  font-family: "roboto", sans-serif;
+  margin-top: 12px;
+}
+.options{
+  margin-left: 20px;
+}
+.option{
+  .option {
+  margin: 6px 0;
+}
 }
 
 .summary {
@@ -77,4 +128,11 @@ button:hover {
 .past-item {
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
+}
+.question-card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  background: #f9f9f9;
 }

@@ -7,6 +7,8 @@ function App() {
   const [quiz, setQuiz] = useState(null);
   const [pastQuizzes, setPastQuizzes] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [showAnswer, setShowAnswer] = useState(false);
+
 
   const handleGenerate = async () => {
     try {
@@ -27,11 +29,9 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Wiki Quiz Generator</h1>
-
-      {/* Generate Section */}
+      <h1 className="app-title">Wiki Quiz Generator</h1>
       <div className="card">
-        <h2>Generate Quiz</h2>
+        <h2 className="heading">Generate Quiz</h2>
         <input
           value={url}
           onChange={(e) => setUrl(e.target.value)}
@@ -44,31 +44,36 @@ function App() {
 
       {/* Generated Quiz */}
       {quiz && (
-        <div className="quiz-section">
-          <h2>{quiz.title}</h2>
-          <p className="summary">{quiz.summary}</p>
+        <div>
+          <h2 className="heading2">{quiz.title}</h2>
+          <p>{quiz.summary}</p>
 
           {quiz.quiz.map((q) => (
             <div className="question-card" key={q.question}>
-              <h3>{q.question}</h3>
+              <p className="para"><strong>{q.question}</strong></p>
 
-              <ul>
-                {q.options.map((opt) => (
-                  <li key={opt}>{opt}</li>
+              <div className="options">
+                {q.options.map((opt, i) => (
+                  <div key={i} className="option">
+                    <strong>{String.fromCharCode(65 + i)}.</strong> {opt}
+                  </div>
                 ))}
-              </ul>
+              </div>
 
-              <p className="answer">
-                <strong>Answer:</strong> {q.answer}
-              </p>
+              <button className="btn" onClick={() => setShowAnswer(!showAnswer)}>
+                {showAnswer ? "Hide Answer" : "Show Answer"}
+              </button>
 
-              <p className="difficulty">
-                Difficulty: {q.difficulty}
-              </p>
+              {showAnswer && (
+                <p className="para2">Answer: {q.answer}</p>
+              )}
+
+              <p className="para3"><b>Difficulty:</b> {q.difficulty}</p>
             </div>
           ))}
         </div>
       )}
+
 
       {/* Past Quizzes */}
       <button className="past-btn" onClick={handlePastQuizzes}>
