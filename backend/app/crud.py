@@ -6,25 +6,26 @@ def save_quiz(data):
     conn = get_db_connection()
     cur = conn.cursor()
 
-    try:
-        cur.execute(
-            """
-            INSERT INTO quizzes (url, title, summary, quiz, related_topics)
-            VALUES (%s, %s, %s, %s, %s)
-            ON CONFLICT (url) DO NOTHING;
-            """,
-            (
-                data["url"],
-                data["title"],
-                data["summary"],
-                json.dumps(data["quiz"]),
-                json.dumps(data["related_topics"]),
-            )
+    cur.execute(
+        """
+        INSERT INTO quizzes (url, title, summary, quiz, related_topics)
+        VALUES (%s, %s, %s, %s, %s)
+        ON CONFLICT ON CONSTRAINT quizzes_url_key
+        DO NOTHING;
+        """,
+        (
+            data["url"],
+            data["title"],
+            data["summary"],
+            json.dumps(data["quiz"]),
+            json.dumps(data["related_topics"]),
         )
-        conn.commit()
-    finally:
-        cur.close()
-        conn.close()
+    )
+
+    conn.commit()
+    cur.close()
+    conn.close()
+
 
 def get_all_quizzes():
     conn = get_db_connection()
