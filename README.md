@@ -30,35 +30,6 @@ Deployment
 Backend: Render
 Frontend: Vercel
 
-📂 Project Structure
-wiki-quiz-app/
-│
-├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── db.py
-│   │   ├── crud.py
-│   │   ├── llm.py
-│   │   ├── scraper.py
-│   │   ├── schemas.py
-│   │   └── __init__.py
-│   ├── requirements.txt
-│   ├── .env.example
-│   └── README.md
-│
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   ├── services/
-│   │   │   └── api.js
-│   │   └── index.css
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-│
-└── README.md
-
 ⚙️ Backend Setup (Local)
 1️⃣ Create Virtual Environment
 python -m venv venv
