@@ -10,7 +10,6 @@ def get_db_connection():
         password=os.getenv("DB_PASSWORD"),
         port=os.getenv("DB_PORT", 5432)
     )
-
 def init_db():
     conn = get_db_connection()
     cur = conn.cursor()
@@ -26,7 +25,6 @@ def init_db():
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
     """)
-
     conn.commit()
     cur.close()
     conn.close()
