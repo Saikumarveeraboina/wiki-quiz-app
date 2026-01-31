@@ -1,5 +1,8 @@
 {
   "url": "https://en.wikipedia.org/wiki/Nvidia",
+
+
+  
   "title": "Nvidia",
   "summary": "Nvidia Corporation[a] (/ɛnˈvɪdiə/ en-VID-ee-ə) is an American technology company headquartered in Santa Clara, California. Founded in 1993 by Jensen Huang, Chris Malachowsky, and Curtis Priem, it develops graphics processing units (GPUs), systems on chips (SoCs), and application programming interfaces (APIs) for data science, high-performance computing, video games, and mobile and automotive applications.[5][6] Nvidia has been described as a Big Tech company. Originally focused on GPUs for video gaming, Nvidia broadened their use into other markets, including artificial intelligence (AI), professional visualization, and supercomputing. The company's product lines include GeForce GPUs for gaming and creative workloads, and professional GPUs for edge computing, scientific research, and industrial applications. As of the first quarter of 2025, Nvidia held a 92% share of the discrete desktop and laptop GPU market.[7][8]",
   "quiz": [
